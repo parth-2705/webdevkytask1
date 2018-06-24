@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Image gallery
+    </title>
+    <style>
+* {
+    box-sizing: border-box;
+}
+      body {
+       background-image: url(wallpaper.jpg);
+      }
+
+      .grid {
+      display: flex; 
+      flex-wrap: wrap;
+      padding: 0 4px;
+
+      }
+
+      .column {
+      flex: 33.33%;
+      max-width: 33.33%;
+      padding: 0 10px;
+      margin-top: 25px;
+      }
+
+      .column img {
+      border: 1px solid white;
+      margin-top: 20px;
+      vertical-align: middle;
+      }
+
+      .box p {
+      text-align: center;
+      color: black;
+      font-family: bradley hand itc;
+      font-weight: bold;
+      font-size: 20px;
+      }
+ 
+      .box {
+      background-color: white;
+      margin-top: 10px;
+      padding: 0% 1% 0.5% 1%;
+      border: black solid 1.5px;
+      }
+
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media screen and (max-width: 800px) {
+      .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+     @media screen and (max-width: 600px) {
+        .column {
+          flex: 100%;
+          max-width: 100%;
+        } 
+ }
+    </style>
+  </head>
+  <body>
+    <div style="width: 100%; height: 150px; display: block; position: relative; margin: 2px 0px 20px 0x; border-bottom: lightblue 3px solid; padding-bottom: 0px;"> 
+      <div style="position: absolute; right: 2%; color: white; background-color: lightblue; display: block; padding: auto; width: 250px; border-radius: 20px;">  
+        <h1 style="text-align: center; width: 100%;">MY IMAGE GALLERY<h1>
+      </div>
+    </div >
+    <!-- Photo Grid -->
+    <div class="grid"> 
+      <div class="column" >
+        <div class="box">
+          <img src="photo1.jpeg" alt="beach" style="width:100%">
+          <p>BEACH</p>
+        </div>
+        <div class="box">
+          <img src="photo2.jpg" alt="mountains" style="width:100%">
+          <p>MOUNTAINS</p>
+        </div>
+        <div class="box">
+          <img src="photo3.jpg" alt="desert" style="width:100%">
+          <p>DESERT</p>
+        </div>
+        <div class="box">
+          <img src="photo4.jpg" alt="forest bridge" style="width:100%">
+          <p>FOREST BRIDGE</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="box">
+          <img src="photo5.jpg" alt="snow boulevard" style="width:100%">
+          <p>SNOW BOULEVARD</p>
+        </div>
+        <div class="box">
+          <img src="photo6.jpg" alt="gorge" style="width:100%">
+          <p>GORGE</p>
+        </div>
+        <div class="box">
+          <img src="photo7.jpg" alt="cactus" style="width:100%">
+          <p>CACTUS FOREST</p>
+        </div>
+        <div class="box">
+          <img src="photo8.png" alt="waterfall" style="width:100%">
+          <p>WATERFALL</p>
+        </div>
+      </div>  
+      <div class="column">
+        <div class="box">
+          <img src="photo9.jpg" alt="island" style="width:100%">
+          <p>ISLAND</p>
+        </div>
+        <div class="box">
+          <img src="photo10.jpg" alt="rainforest" style="width:100%">
+          <p>RAINFOREST</p>
+        </div>
+        <div class="box">
+          <img src="photo11.jpg" alt="frozen lake" style="width:100%">
+          <p>FROZEN LAKE</p>
+        </div>
+        <div class="box">
+          <img src="photo12.jpg" alt="river" style="width:100%">
+          <p>RIVER</p>
+        </div>
+      </div>
+    </div>
+    <a href="#top"><p style="position: fixed; right: 0px; bottom: 0px; border: 1px solid white; text-align: centre; background-color: lightblue; padding: 2px;">MOVE TO TOP</p></a>
+  </body>
+</html>
